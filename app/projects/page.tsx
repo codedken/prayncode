@@ -71,7 +71,7 @@ const Work = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="flex min-h-[80vh] flex-col justify-center py-12 xl:py-0"
+      className="flex min-h-[80vh] flex-col justify-center py-8 xl:py-0"
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
@@ -84,7 +84,7 @@ const Work = () => {
                 {project.category} project
               </h2>
               <p className="text-white/60">{project.description}</p>
-              <ul className="flex gap-4">
+              <ul className="flex flex-wrap gap-4">
                 {project.stack.map((item, index) => {
                   return (
                     <li key={index} className="text-xl text-accent">
@@ -133,7 +133,7 @@ const Work = () => {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="group relative flex h-[460px] items-center justify-center bg-pink-50/20">
+                    <div className="group relative flex h-[360px] items-center justify-center bg-pink-50/20 md:h-[460px]">
                       <div className="absolute bottom-0 top-0 z-10 h-full w-full bg-black/10" />
 
                       <div className="relative h-full w-full">

@@ -33,7 +33,7 @@ const services = [
   },
   {
     num: "05",
-    title: "Technical Wrting",
+    title: "Technical Writing",
     description:
       "I make your products and services quite intuitive for users through a legibly written documentation.",
     href: "",
@@ -45,7 +45,7 @@ import Link from "next/link";
 
 const Services = () => {
   return (
-    <section className="flex min-h-[80vh] flex-col justify-center py-12 xl:py-0">
+    <section className="flex min-h-[80vh] flex-col justify-center py-8 xl:py-0">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0 }}

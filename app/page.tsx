@@ -12,11 +12,10 @@ const Home = () => {
         <div className="flex flex-col items-center justify-between xl:flex-row xl:pb-24 xl:pt-8">
           <div className="order-2 text-center xl:order-none xl:text-left">
             <AnimatedText />
-            <h1 className="h1 mb-6">
-              <span className="h2">Hey there, I&apos;m</span>
-              <br />
-              <span className="text-accent">Kennedy Ojukwu</span>
-            </h1>
+
+            <h2 className="h2 mt-2">Hey there, I&apos;m</h2>
+            <h1 className="h1 mb-6 text-accent">Kennedy Ojukwu</h1>
+
             <p className="mb-9 max-w-[500px] text-white/80">
               I thrive successfully at translating both simple and arcane ideas
               into useful digital realities using neatly indited code.
@@ -33,7 +32,7 @@ const Home = () => {
               <div className="mb-8 xl:mb-0">
                 <Socials
                   containerStyles="flex gap-6"
-                  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
+                  iconStyles="size-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
                 />
               </div>
             </div>

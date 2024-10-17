@@ -18,7 +18,7 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="absolute h-[298px] w-[298px] mix-blend-luminosity xl:h-[498px] xl:w-[498px]"
+          className="absolute size-[298px] mix-blend-luminosity xl:size-[498px]"
         >
           <Image
             src="/assets/kencode.png"

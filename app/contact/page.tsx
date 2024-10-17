@@ -60,7 +60,9 @@ const Contact = () => {
         <div className="flex flex-col gap-[30px] xl:flex-row xl:items-start">
           <div className="order-2 xl:order-none xl:w-[54%]">
             <form className="flex flex-col gap-6 rounded-xl bg-[#27272c] p-4 md:p-10">
-              <h3 className="text-4xl text-accent">Let&apos;s work together</h3>
+              <h3 className="text-3xl text-accent md:text-4xl">
+                Let&apos;s work together
+              </h3>
               <p className="text-white/60">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad
                 abamet quisquam earum

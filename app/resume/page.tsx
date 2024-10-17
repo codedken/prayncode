@@ -195,14 +195,14 @@ const Resume = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="flex min-h-[80vh] justify-center py-12 xl:pt-8"
+      className="flex min-h-[80vh] justify-center py-8 xl:pt-8"
     >
       <div className="container mx-auto">
         <Tabs
           defaultValue="experience"
-          className="flex flex-col gap-[60px] xl:flex-row"
+          className="flex flex-col gap-[40px] md:gap-[60px] xl:flex-row"
         >
-          <TabsList className="mx-auto flex w-full max-w-[380px] flex-col gap-6 xl:mx-0">
+          <TabsList className="mx-auto flex w-full max-w-[380px] flex-col gap-4 xl:mx-0">
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
@@ -223,7 +223,7 @@ const Resume = () => {
                       return (
                         <li
                           key={index}
-                          className="flex h-[184px] flex-col items-center justify-center gap-1 rounded-xl bg-[#232329] px-10 py-6 lg:items-start"
+                          className="flex flex-col items-center justify-center gap-1 rounded-xl bg-[#232329] px-10 py-6 lg:items-start"
                         >
                           <span className="text-accent">{item.duration}</span>
                           <h3 className="min-h-[60px] max-w-[260px] text-center text-xl lg:text-left">
@@ -254,15 +254,17 @@ const Resume = () => {
                       return (
                         <li
                           key={index}
-                          className="flex h-[220px] flex-col items-center justify-center gap-2 rounded-xl bg-[#232329] px-10 py-6 lg:items-start"
+                          className="flex flex-col items-center justify-center gap-2 rounded-xl bg-[#232329] px-10 py-6 lg:items-start"
                         >
                           <span className="text-accent">{item.duration}</span>
                           <h3 className="min-h-[60px] max-w-[260px] text-center text-xl lg:text-left">
                             {item.degree}
                           </h3>
                           <div className="flex items-center gap-3">
-                            <span className="h-[6px] w-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.institution}</p>
+                            <span className="size-[6px] rounded-full bg-accent"></span>
+                            <p className="truncate text-white/60">
+                              {item.institution}
+                            </p>
                           </div>
                         </li>
                       );
@@ -319,7 +321,9 @@ const Resume = () => {
                     return (
                       <li key={index} className="flex items-center gap-4">
                         <span className="text-white/60">{item.fieldName}:</span>
-                        <span className="text-xl">{item.fieldValue}</span>
+                        <span className="text-lg md:text-xl">
+                          {item.fieldValue}
+                        </span>
                       </li>
                     );
                   })}

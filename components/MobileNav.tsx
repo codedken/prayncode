@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
 import { useState } from "react";
+import { ScrollArea } from "./ui/scroll-area";
 
 const links = [
   { name: "home", path: "/" },
@@ -28,26 +29,28 @@ const MobileNav = () => {
         <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>
       <SheetContent className="flex flex-col">
-        <div className="mb-40 mt-32 text-center text-2xl">
-          <h1 className="text-4xl font-semibold">
-            Pray&Code<span className="text-accent">.</span>
+        <div className="mb-12 mt-24 text-2xl">
+          <h1 className="text-3xl font-semibold">
+            Pray<span className="text-accent">&</span>Code
+            <span className="text-accent">.</span>
           </h1>
         </div>
-
-        <nav className="flex flex-col items-center justify-center gap-8">
-          {links.map((link, index) => {
-            return (
-              <Link
-                href={link.path}
-                key={index}
-                onClick={toggleSideMenu}
-                className={`${link.path === pathName && "border-b-2 border-accent text-accent"} text-xl capitalize transition-all hover:text-accent`}
-              >
-                {link.name}
-              </Link>
-            );
-          })}
-        </nav>
+        <ScrollArea className="h-[350px]">
+          <nav className="flex flex-col gap-8">
+            {links.map((link, index) => {
+              return (
+                <Link
+                  href={link.path}
+                  key={index}
+                  onClick={toggleSideMenu}
+                  className={`${link.path === pathName && "border-b-2 border-accent text-accent"} w-fit text-xl capitalize transition-all hover:text-accent`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
+          </nav>
+        </ScrollArea>
       </SheetContent>
     </Sheet>
   );
