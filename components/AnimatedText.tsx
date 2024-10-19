@@ -4,9 +4,11 @@ import { ReactTyped } from "react-typed";
 
 const functions = [
   "Frontend Developer",
+  "UI/UX Designer",
   "Backend Developer",
   "Flutter Developer",
   "DevOps Engineer",
+  "Technical Writer",
 ];
 
 const AnimatedText = () => {

@@ -3,30 +3,30 @@
 const articles = [
   {
     num: "01",
-    title: "How to Efficiently Cache your App",
+    title: "How to Cache Data in your NextJs Application",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident.",
+      "The aim of this article is to simplify for you the concept of data caching in a nextjs application. This article came as a result of my…",
     href: "/articles/1",
   },
   {
     num: "02",
-    title: "A Basic Auth System with NextAuth",
+    title: "The Concept of Expansion in the Linux Command Line",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident.",
+      "In this short article, we will be exploring an important concept in linux shell called expansion.",
     href: "/articles/2",
   },
   {
     num: "03",
-    title: "Understanding the Most Common Used React Hooks",
+    title: "Concept of Virtualization",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident.",
+      "What is Virtualization? Virtualization is a technology you can use to create a virtual representation of servers, networks, storage and other physical machines.",
     href: "/articles/3",
   },
   {
     num: "04",
-    title: "DevOps Simplified",
+    title: "React useEffect hook",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident.",
+      "React is a Javascript library for building user interfaces. It is the most popular Javascript library. This is not an article for learning…",
     href: "/articles/4",
   },
 ];
@@ -65,10 +65,12 @@ const Articles = () => {
                     <BsArrowRight className="text-xl text-primary" />
                   </Link>
                 </div>
-                <h2 className="text-[28px] font-bold leading-none text-white transition-all duration-500 xl:text-[36px]">
+                <h2 className="text-[28px] font-bold leading-9 text-white transition-all duration-500 xl:text-[36px]">
                   {service.title}
                 </h2>
-                <p className="text-white/60">{service.description}</p>
+                <p className="line-clamp-2 text-white/60">
+                  {service.description}
+                </p>
                 <div className="w-full border-b border-white/20"></div>
               </div>
             );

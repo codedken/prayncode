@@ -1,47 +1,61 @@
 "use client";
 
-import { BsArrowDownRight } from "react-icons/bs";
+import { BiLogoFlutter } from "react-icons/bi";
+import { FaFigma, FaInfinity, FaLaptop } from "react-icons/fa";
+import { FaPenToSquare, FaScrewdriverWrench } from "react-icons/fa6";
 
 const services = [
   {
-    num: "01",
+    icon: (
+      <FaLaptop className="size-8 transition-all duration-500 group-hover:text-accent md:size-10" />
+    ),
     title: "Web Development",
     description:
       "I craft high performant web applications with shiny UIs using the most modern web technologies",
-    href: "",
   },
   {
-    num: "02",
+    icon: (
+      <FaInfinity className="size-8 transition-all duration-500 group-hover:text-accent md:size-10" />
+    ),
     title: "DevOps Services",
     description:
       "I can help you provision, optimize, and manage your infrastructure using modern DevOps practices",
-    href: "",
   },
   {
-    num: "03",
-    title: "Flutter Application",
+    icon: (
+      <BiLogoFlutter className="size-8 transition-all duration-500 group-hover:text-accent md:size-10" />
+    ),
+    title: "Flutter App",
     description:
       "I build efficient cross-platform mobile applications with fascinating UIs using flutter and dart",
-    href: "",
   },
   {
-    num: "04",
+    icon: (
+      <FaScrewdriverWrench className="size-6 transition-all duration-500 group-hover:text-accent md:size-8" />
+    ),
     title: "Backend Development",
     description:
       "I write highly efficient APIs that are easy to consume. I usually achieve this using either nodejs or python. ",
-    href: "",
   },
   {
-    num: "05",
+    icon: (
+      <FaPenToSquare className="size-8 transition-all duration-500 group-hover:text-accent md:size-10" />
+    ),
     title: "Technical Writing",
     description:
       "I make your products and services quite intuitive for users through a legibly written documentation.",
-    href: "",
+  },
+  {
+    icon: (
+      <FaFigma className="size-8 transition-all duration-500 group-hover:text-accent md:size-10" />
+    ),
+    title: "UI/UX Design",
+    description:
+      "I bring to reality sleek and beautiful designs that are locked up in the realm of imagination and hallucination",
   },
 ];
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 const Services = () => {
   return (
@@ -61,20 +75,12 @@ const Services = () => {
                 key={index}
                 className="group flex flex-1 flex-col justify-center gap-6"
               >
-                <div className="flex w-full items-center justify-between">
-                  <div className="text-outline group-hover:text-outline-hover text-5xl font-extrabold text-transparent transition-all duration-500">
-                    {service.num}
-                  </div>
-                  <Link
-                    href={service.href}
-                    className="flex size-[60px] items-center justify-center rounded-full bg-white transition-all duration-500 hover:-rotate-45 group-hover:bg-accent"
-                  >
-                    <BsArrowDownRight className="text-3xl text-primary" />
-                  </Link>
+                <div className="flex items-center gap-4">
+                  {service.icon}
+                  <h2 className="text-[28px] font-bold leading-none text-white transition-all duration-500 group-hover:text-accent md:text-[36px]">
+                    {service.title}
+                  </h2>
                 </div>
-                <h2 className="text-[28px] font-bold leading-none text-white transition-all duration-500 group-hover:text-accent md:text-[42px]">
-                  {service.title}
-                </h2>
                 <p className="text-white/60">{service.description}</p>
                 <div className="w-full border-b border-white/20"></div>
               </div>
