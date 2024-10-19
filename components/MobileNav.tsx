@@ -43,7 +43,7 @@ const MobileNav = () => {
                   href={link.path}
                   key={index}
                   onClick={toggleSideMenu}
-                  className={`${link.path === pathName && "border-b-2 border-accent text-accent"} w-fit text-xl capitalize transition-all hover:text-accent`}
+                  className={`${(link.path === pathName || (link.name === "articles" && pathName.includes("articles"))) && "border-b-2 border-accent text-accent"} w-fit text-xl capitalize transition-all hover:text-accent`}
                 >
                   {link.name}
                 </Link>

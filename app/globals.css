@@ -14,7 +14,7 @@
     @apply text-[32px] font-semibold leading-[1.1] sm:text-[36px] md:text-[42px] lg:text-[46px] xl:text-[48px];
   }
   .h3 {
-    @apply text-[20px] font-semibold leading-[1.1] xl:text-[24px];
+    @apply text-[20px] font-semibold leading-[1.1] sm:text-[24px];
   }
   .text-outline {
     -webkit-text-stroke: 1px #ffffff;

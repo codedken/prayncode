@@ -6,7 +6,12 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import { BsArrowUpRight, BsBehance, BsGithub } from "react-icons/bs";
+import {
+  BsAndroid2,
+  BsArrowUpRight,
+  BsBehance,
+  BsGithub,
+} from "react-icons/bs";
 
 import {
   Tooltip,
@@ -56,7 +61,7 @@ const projects = [
       "A mobile app used for random selection. E.g It can be used for sharing gifts among members of a certain group by random pairing.",
     stack: [{ name: "Flutter" }, { name: "Dart" }, { name: "Firebase" }],
     image: "/assets/work/giftor.png",
-    live: "www.giftor.app",
+    live: "https://drive.google.com/file/d/1kuaOI7d49n0Mq5hQlE7b1QvfflmLXeXC/view?usp=sharing",
     github: "https://github.com/codedken/giftor",
   },
   {
@@ -162,10 +167,18 @@ const Work = () => {
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
                         <TooltipTrigger className="group flex size-[50px] items-center justify-center rounded-full bg-white/10 xl:size-[70px]">
-                          <BsArrowUpRight className="text-xl text-white group-hover:text-accent xl:text-3xl" />
+                          {project.category === "flutter" ? (
+                            <BsAndroid2 className="text-xl text-white group-hover:text-accent xl:text-3xl" />
+                          ) : (
+                            <BsArrowUpRight className="text-xl text-white group-hover:text-accent xl:text-3xl" />
+                          )}
                         </TooltipTrigger>
                         <TooltipContent>
-                          <p>Live project</p>
+                          {project.category === "flutter" ? (
+                            <p>Download Apk</p>
+                          ) : (
+                            <p>Live project</p>
+                          )}
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>
@@ -182,7 +195,11 @@ const Work = () => {
                         )}
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Github repository</p>
+                        {project.live === "" ? (
+                          <p>Behance Gallery</p>
+                        ) : (
+                          <p>Github repository</p>
+                        )}
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>

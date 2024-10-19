@@ -14,7 +14,7 @@ const Home = () => {
             <AnimatedText />
 
             <h2 className="h2 mt-2">Hey there, I&apos;m</h2>
-            <h1 className="h1 mb-6 text-accent">Kennedy Ojukwu</h1>
+            <h1 className="h1 mb-6 text-accent">Kennedy C.O</h1>
 
             <p className="mb-9 max-w-[500px] text-white/80">
               I thrive successfully at translating both simple and arcane ideas
