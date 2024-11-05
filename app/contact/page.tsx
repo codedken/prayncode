@@ -64,8 +64,7 @@ const Contact = () => {
                 Let&apos;s work together
               </h3>
               <p className="text-white/60">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad
-                abamet quisquam earum
+                Shoot me an email, let&apos;s quickly make that idea a reality.
               </p>
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <Input type="text" placeholder="Firstname" />
@@ -80,11 +79,14 @@ const Contact = () => {
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="est">Web Development</SelectItem>
-                    <SelectItem value="cst">DevOps Services</SelectItem>
-                    <SelectItem value="mst">Flutter Applications</SelectItem>
-                    <SelectItem value="mst">Backend Development</SelectItem>
-                    <SelectItem value="mst">Technical Writing</SelectItem>
+                    <SelectItem value="webdev">Web Development</SelectItem>
+                    <SelectItem value="uiux">UI/UX Design</SelectItem>
+                    <SelectItem value="devops">DevOps Services</SelectItem>
+                    <SelectItem value="flutter">
+                      Flutter Applications
+                    </SelectItem>
+                    <SelectItem value="backend">Backend Development</SelectItem>
+                    <SelectItem value="technical">Technical Writing</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>

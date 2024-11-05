@@ -6,6 +6,13 @@ import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
 import { useState } from "react";
 import { ScrollArea } from "./ui/scroll-area";
+import {
+  LoginLink,
+  LogoutLink,
+  RegisterLink,
+} from "@kinde-oss/kinde-auth-nextjs/components";
+import { Button } from "./ui/button";
+import { KindeUser } from "@kinde-oss/kinde-auth-nextjs/types";
 
 const links = [
   { name: "home", path: "/" },
@@ -15,7 +22,7 @@ const links = [
   { name: "articles", path: "/articles" },
   { name: "contact", path: "/contact" },
 ];
-const MobileNav = () => {
+const MobileNav = ({ user }: { user: KindeUser<Record<string, unknown>> }) => {
   const pathName = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -51,6 +58,27 @@ const MobileNav = () => {
             })}
           </nav>
         </ScrollArea>
+        <div className="h-0.5 w-full bg-white" />
+        {user ? (
+          <LogoutLink className="mt-6">
+            <Button className="h-fit rounded-full bg-red-500 px-3.5 py-2 text-white/90 hover:bg-red-600">
+              Logout
+            </Button>
+          </LogoutLink>
+        ) : (
+          <div className="mt-6 flex gap-2">
+            <LoginLink>
+              <Button className="h-fit rounded-full bg-blue-400 px-3.5 py-2 hover:bg-blue-500">
+                Login
+              </Button>
+            </LoginLink>
+            <RegisterLink>
+              <Button className="h-fit rounded-full bg-green-400 px-3.5 py-2 hover:bg-green-500">
+                Register
+              </Button>
+            </RegisterLink>
+          </div>
+        )}
       </SheetContent>
     </Sheet>
   );

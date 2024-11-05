@@ -9,11 +9,12 @@ const links = [
   { name: "resume", path: "/resume" },
   { name: "projects", path: "/projects" },
   { name: "articles", path: "/articles" },
+  { name: "contact", path: "/contact" },
 ];
 const Nav = () => {
   const pathName = usePathname();
   return (
-    <nav className="flex gap-8">
+    <nav className="flex gap-6">
       {links.map((link, index) => {
         return (
           <Link
